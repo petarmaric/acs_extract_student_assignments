@@ -2,3 +2,6 @@ TODO.rst
 .vscode/
 commit-message.txt
 *.pyc
+dist/
+build/
+*.egg-info/
