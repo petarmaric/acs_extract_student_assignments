@@ -71,7 +71,8 @@ def store_student_assignments(student_assignments, to_path):
     for computer, index, code_filename, code_fileobj in student_assignments:
         code_path = os.path.join(to_path, computer + STUDENT_DIR_INFO_SEPARATOR + index, code_filename)
         logging.info("Extracting assignments for student %s at %s to '%s'", index, computer, code_path)
-        os.makedirs(os.path.dirname(code_path))
+        if not os.path.exists(os.path.dirname(code_path)):
+            os.makedirs(os.path.dirname(code_path))
         with open(code_path, 'wb') as out:
             out.write(code_fileobj.read())
 
