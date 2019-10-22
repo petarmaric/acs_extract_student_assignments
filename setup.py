@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='acs_extract_student_assignments',
-    version='1.0.0',
+    version='1.0.1',
     url='https://github.com/petarmaric/acs_extract_student_assignments',
     license='BSD',
     author='Petar Maric',
